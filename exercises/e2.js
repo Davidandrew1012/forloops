@@ -4,24 +4,21 @@
 
 export function getNumbersWithSquareRoots(max)
 {
-
-    const numbers_with_square_roots = [];
-    let index = 0;
-
-    // Square root
-    for (let i = 0; i < max; i++)
-    {
-        if (Math.sqrt(i) % 1 == 0)
-        {            
-            numbers_with_square_roots[index] = i;
-            index++
+    let result = [];
+    
+    for(let i = 0; i <= max; i++){
+        let sqrt = Math.sqrt(i);
+        if(Number.isInteger(sqrt)){
+            result.push(i);
         }
     }
-
-    return numbers_with_square_roots;
+    return result;
 }
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
+
+// let index = 0;
