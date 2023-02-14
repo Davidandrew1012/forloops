@@ -7,15 +7,14 @@
 export function getClientWithGreatestBalance(array) {
   let greatestBalance = 0;
   let greatestAccount;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].balance > greatestBalance) {
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].balance > greatestBalance) {
       greatestBalance = array[i].balance;
       greatestAccount = array[i];
     }
   }
-  return ([greatestAccount]);
+  return ([greatestAccount])
 }
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"
