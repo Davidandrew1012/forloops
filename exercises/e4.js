@@ -8,14 +8,11 @@ return Math.min(...array)
 }
 
 export function findMaxValueInArray(array) {
-  return Math.max(... array)
+  return Math.max(...array)
 }
 
-// === TEST YOURSELF ===
-// Once you're finished run the test with "npm run test-4"
-// If the test has all tests passed, switch to the next exercise file
-// If any of the tests fails, refactor the code and run the test command after you've fixed the function
 
+// I also have VVV
 
 // export function findMinValueInArray(array) {
 //   let min = array[0];
@@ -36,3 +33,9 @@ export function findMaxValueInArray(array) {
 //  }
 // return max;
 // }
+
+// === TEST YOURSELF ===
+// Once you're finished run the test with "npm run test-4"
+// If the test has all tests passed, switch to the next exercise file
+// If any of the tests fails, refactor the code and run the test command after you've fixed the function
+

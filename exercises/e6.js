@@ -3,11 +3,11 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
+
 export function getClientWithNoMoney(array) {
   const zeroBalance = [];
-
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].balance === 0) {
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].balance === 0) {
       zeroBalance.push(array[i].name);
     }
   }

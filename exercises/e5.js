@@ -5,9 +5,9 @@
 
 import { bankAccounts } from "../data/data";
 
-export function getAllClientNames(array) {
+export function getAllClientNames() {
   let names = [];
-  for (let i = 0; i < bankAccounts.length; i++) {
+  for(let i = 0; i < bankAccounts.length; i++) {
     names.push(bankAccounts[i].name);
   }
   return names;
