@@ -3,21 +3,19 @@
 // Array example: bankAccounts in /data/data.js
 // getAllWithdrawals(bankAccounts) => [3432, 43242.34, 23432]
 
-export function getAllWithDrawals(array) {
-  let findWithdrawals = [];
-  let sum = 0;
-  for(let i = 0; i < array.length; i++) {
-    if(array[i].withdrawals) {
-     findWithdrawals.push(array[i].withdrawals)
-} else if (!array[i].withdrawals) {
-  findWithdrawals.push(0)
+export function getAllWithdrawals(array) {
+  let withdrawSums = [];
+  for (let i = 0; i < array.length; i++) {
+    let sum = 0;
+    if (array[i].withdrawals) {
+      for (let j = 0; j < array[i].withdrawals.length; j++) {
+        sum += array[i].withdrawals[j];
+      }
+    }
+    withdrawSums.push(sum);
+  }
+  return withdrawSums;
 }
-}
- for(let i = 0; i < findWithdrawals.length; i++) {
-return findWithdrawals
-}
-}
-  
 
 
 
