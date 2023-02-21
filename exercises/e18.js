@@ -4,7 +4,7 @@
 // joinToString(['a', 'b', 'c'], '-') => 'a-b-c'
 // NOTE: You can NOT use the array.join(), array.toString(), and array.replace() methods in your code
 
-function joinToString(array, separator) {
+export function joinToString(array, separator) {
     let str = "";
     for (let i = 0; i < array.length; i++) {
       str += array[i];
