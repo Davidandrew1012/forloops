@@ -6,11 +6,28 @@
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithWrongBalance(array) {
-  // Your code goes here...
-
+  let wrongBalanceAccounts = [];
+  for (let i = 0; i < array.length; i++) {
+    let currentAccount = array[i];
+    let depositsTotal = 0;
+    let withdrawalsTotal = 0;
+    if (currentAccount.deposits !== undefined) {
+      for ( let j = 0; j < currentAccount.deposits.length; j++) {
+        depositsTotal += currentAccount.deposits[j];
+      }
+    }
+    if (currentAccount.withdrawals !== undefined) {
+      for (let k = 0; k < currentAccount.withdrawals.length; k++) {
+        withdrawalsTotal += currentAccount.withdrawals[k];
+      }
+    }
+    let expectedBalance = depositsTotal - withdrawalsTotal;
+    if (currentAccount.balance !== expectedBalance) {
+      wrongBalanceAccounts.push(currentAccount);
+    }
+  }
+  return wrongBalanceAccounts;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"
