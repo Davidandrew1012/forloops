@@ -12,7 +12,7 @@ export function getClientsWithWrongBalance(array) {
     let depositsTotal = 0;
     let withdrawalsTotal = 0;
     if (currentAccount.deposits !== undefined) {
-      for ( let j = 0; j < currentAccount.deposits.length; j++) {
+      for (let j = 0; j < currentAccount.deposits.length; j++) {
         depositsTotal += currentAccount.deposits[j];
       }
     }
@@ -28,6 +28,8 @@ export function getClientsWithWrongBalance(array) {
   }
   return wrongBalanceAccounts;
 }
+
+
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-14"

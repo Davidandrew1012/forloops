@@ -18,7 +18,6 @@ export function separateNamesWithAFromRest(array) {
   return [namesWithA, namesWithoutA];
 }
 
-
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"
 // If the test has all tests passed, switch to the next exercise file
