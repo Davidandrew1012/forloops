@@ -5,11 +5,20 @@
 // separateNamesWithAFromRest(["jon", "alice", "andrew", "mark", "jimmy"]) -> [["alice", "andrew", "mark"], ["jon", "jimmy"]]
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
-export function separateNamesWithAFromRest(array) {
+export 
+function separateNamesWithAFromRest(array) {
   let namesWithA = [];
   let namesWithoutA = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i].includes("a") || array[i].includes("A")) {
+    let currentName = array[i].toLowerCase();
+    let hasA = false;
+    for (let j = 0; j < currentName.length; j++) {
+      if (currentName[j] === 'a') {
+        hasA = true;
+        break;
+      }
+    }
+    if (hasA) {
       namesWithA.push(array[i]);
     } else {
       namesWithoutA.push(array[i]);
@@ -17,6 +26,20 @@ export function separateNamesWithAFromRest(array) {
   }
   return [namesWithA, namesWithoutA];
 }
+
+//Rejected code VVV
+// export function separateNamesWithAFromRest(array) {
+//   let namesWithA = [];
+//   let namesWithoutA = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i].toLowerCase().includes("a")) {
+//       namesWithA.push(array[i]);
+//     } else {
+//       namesWithoutA.push(array[i]);
+//     }
+//   }
+//   return [namesWithA, namesWithoutA];
+// }
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"

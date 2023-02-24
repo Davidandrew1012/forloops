@@ -5,12 +5,12 @@
 
 export function getClientWithLeastBalance(array) {
     let leastBalance = {balance: Infinity};
-    for(let i = 0; i < array.length; i++) {
-      if(array[i].balance < leastBalance.balance && array[i].balance > 0){
+    for (let i = 0; i < array.length; i++) {
+      if (array[i].balance < leastBalance.balance && array[i].balance > 0) {
         leastBalance = array[i];
       }
     }
-    return ([leastBalance])
+    return [leastBalance];
 }
 
 // === TEST YOURSELF ===

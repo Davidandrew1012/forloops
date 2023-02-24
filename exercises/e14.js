@@ -11,12 +11,12 @@ export function getClientsWithWrongBalance(array) {
     let currentAccount = array[i];
     let depositsTotal = 0;
     let withdrawalsTotal = 0;
-    if (currentAccount.deposits !== undefined) {
+    if (currentAccount.deposits) {
       for (let j = 0; j < currentAccount.deposits.length; j++) {
         depositsTotal += currentAccount.deposits[j];
       }
     }
-    if (currentAccount.withdrawals !== undefined) {
+    if (currentAccount.withdrawals) {
       for (let k = 0; k < currentAccount.withdrawals.length; k++) {
         withdrawalsTotal += currentAccount.withdrawals[k];
       }

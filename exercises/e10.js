@@ -4,35 +4,31 @@
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
 
 export function getClientsWithLetterInName(array, letter) {
-  const matchingClients = [];
-
-  for (let i = 0; i < array.length; i++)
-  if(array[i].name.toLowerCase().includes(letter))
-  matchingClients.push(array[i].name)
-  
-  return matchingClients;
+  let clientNames = [];
+  for (let account of array) {
+    for (let char of account.name) {
+      if (char.toLowerCase() === letter.toLowerCase()) {
+        clientNames.push(account.name);
+        break;
+      }
+    }
+  }
+  return clientNames;
 }
 
-//I also have:
+
+// Rejected Code VVV
 // export function getClientsWithLetterInName(array, letter) {
-//   let clientNames = [];
-//   for (var i = 0; i < array.length; i++) {
-//     let clientLetters = [];
-//     var hasTheLetter = false;
-//     for ( let x in array[i].name) {
-//       clientLetters.push(array[i].name[x].toLowerCase());
-//     }
-//     for (let y = 0; y < clientLetters.length; y++) {
-//       if(clientLetters[y] == letter) {
-//         var hasTheLetter = true;
-//       }
-//     }
-//     if (hasTheLetter) {
-//       clientNames.push(array[i].name);
-//     }
+//   const matchingClients = [];
+
+//   for (let i = 0; i < array.length; i++)
+//   if (array[i].name.toLowerCase().includes(letter)) {
+//   matchingClients.push(array[i].name) 
 //   }
-//   return clientNames;
+  
+//   return matchingClients;
 // }
+
 
 
 // === TEST YOURSELF ===
