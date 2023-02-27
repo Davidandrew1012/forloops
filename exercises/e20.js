@@ -21,7 +21,29 @@ export function separateNamesWithAFromRest(array) {
   return resArr;
 }
 
-//Rejected code VVV
+// old code VVV ==========
+// export function separateNamesWithAFromRest(array) {
+//   let namesWithA = [];
+//   let namesWithoutA = [];
+//   for (let i = 0; i < array.length; i++) {
+//     let currentName = array[i].toLowerCase();
+//     let hasA = false;
+//     for (let j = 0; j < currentName.length; j++) {
+//       if (currentName[j] === 'a') {
+//         hasA = true;
+//         break;
+//       }
+//     }
+//     if (hasA) {
+//       namesWithA.push(array[i]);
+//     } else {
+//       namesWithoutA.push(array[i]);
+//     }
+//   }
+//   return [namesWithA, namesWithoutA];
+// }
+
+//Rejected code VVV ========
 // export function separateNamesWithAFromRest(array) {
 //   let namesWithA = [];
 //   let namesWithoutA = [];
